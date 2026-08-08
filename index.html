@@ -55,32 +55,11 @@ header.hero{
   border:1px solid rgba(255,255,255,.9);
   padding:6px 14px;border-radius:999px;
 }
-h1.brand{
-  font-family:'Times New Roman',Times,serif;
-  font-weight:600;
-  font-size:clamp(52px,9vw,84px);
-  margin:0;
-  line-height:.95;
-  letter-spacing:-.01em;
-}
-.brand .club{
-  font-style:italic;
-  font-weight:600;
-  background:var(--pink);
-  padding:2px 22px 8px;
-  border-radius:2px;
-  display:inline-block;
-  transform:rotate(-1.2deg);
-  margin-top:6px;
-}
-p.tagline{
-  font-size:17px;color:var(--ink-soft);margin:22px 0 0;
-}
-p.tagline .mark{background:linear-gradient(180deg,transparent 58%,var(--yellow) 58%);padding:0 3px;}
+
 .catalog-pill{
   display:inline-block;margin-top:26px;
-  font-family:'Times New Roman',Times,serif;font-style:italic;font-size:15px;
-  color:var(--pink-deep);border-bottom:1.5px solid var(--pink-deep);padding-bottom:2px;
+  font-family:'Times New Roman',Times,serif;font-style:italic;font-size:32px;
+  color:var(--pink-deep);border-bottom:1.5px solid var(--pink-deep);padding-bottom:6px;
 }
 
 /* SECTION HEADERS */
@@ -194,6 +173,40 @@ table.price tbody tr:hover{background:#fffaf1;}
 .kit-price .num{font-family:'Times New Roman',Times,serif;font-size:34px;font-weight:600;color:var(--pink-deep);}
 .kit-price .lbl{font-size:12px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em;}
 
+/* ACCORDION (qualidade & cuidados / FAQ) */
+.accordion{
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 14px 30px -20px rgba(40,50,70,.35);
+}
+.accordion details{border-top:1px solid var(--line);}
+.accordion details:first-child{border-top:none;}
+.accordion summary{
+  cursor:pointer;
+  list-style:none;
+  padding:18px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  font-weight:500;font-size:15px;color:var(--ink);
+}
+.accordion summary::-webkit-details-marker{display:none;}
+.accordion summary:after{
+  content:"+";
+  font-size:20px;line-height:1;color:var(--pink-deep);
+  transition:transform .2s ease;flex-shrink:0;
+}
+.accordion details[open] summary:after{transform:rotate(45deg);}
+.accordion details[open] summary{border-bottom:1px solid var(--line);}
+.accordion .accordion-body{padding:16px 22px 22px;color:var(--ink-soft);font-size:14px;line-height:1.7;}
+.accordion .accordion-body p{margin:0 0 12px;}
+.accordion .accordion-body p:last-child{margin-bottom:0;}
+.accordion .accordion-body ul{margin:10px 0 0;padding-left:20px;}
+.accordion .accordion-body li{margin-bottom:6px;}
+.accordion .accordion-body .check-list{list-style:none;padding-left:0;}
+.accordion .accordion-body .check-list li{padding-left:24px;position:relative;margin-bottom:8px;}
+.accordion .accordion-body .check-list li:before{content:"✓";position:absolute;left:0;color:var(--pink-deep);font-weight:600;}
+
 /* CTA (link do WhatsApp entra aqui no futuro) */
 .wa-cta{
   display:inline-flex;align-items:center;gap:8px;
@@ -234,9 +247,7 @@ hr.torn{border:none;height:14px;margin:0 auto 30px;max-width:200px;
   <div class="eyebrow-nav">
     <span>home</span><span>catálogo</span><span>journal club</span><span>encomendas</span>
   </div>
-  <h1 class="brand">Carola<br><span class="club">club</span></h1>
-  <p class="tagline">um lugar onde as <span class="mark">memórias</span> podem ser tocadas.</p>
-  <span class="catalog-pill">catálogo de produtos — 2026</span>
+  <span class="catalog-pill">catálogo de produtos</span>
 </header>
 
 <div class="wrap">
@@ -396,6 +407,79 @@ hr.torn{border:none;height:14px;margin:0 auto 30px;max-width:200px;
     <span class="wa-cta cta-soon" data-msg="Olá! Quero pedir produtos avulsos do Journal Club (Carola Club).">
       vendas a partir de setembro
     </span>
+  </section>
+
+  <!-- QUALIDADE E CUIDADOS -->
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">qualidade <em>&amp; cuidados</em></h2>
+    </div>
+    <p class="section-sub">Tudo sobre como suas fotos são feitas e como cuidar delas — clique em cada tópico para abrir.</p>
+
+    <div class="accordion">
+      <details>
+        <summary>Como produzimos suas fotos</summary>
+        <div class="accordion-body">
+          <p>Utilizamos impressora fotográfica de alta resolução, tintas originais e papéis fotográficos premium, desenvolvidos especialmente para reproduzir cores vivas, detalhes nítidos e excelente qualidade de imagem.</p>
+          <p>Cada fotografia é conferida manualmente antes de ser embalada e enviada.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Sobre a durabilidade</summary>
+        <div class="accordion-body">
+          <p>Nossas fotos são produzidas em papel fotográfico de alta qualidade, resistente à água e ao manuseio quando utilizadas em condições normais. Com os cuidados adequados, elas permanecem bonitas por muitos anos.</p>
+          <p>Para preservar suas memórias por ainda mais tempo, recomendamos:</p>
+          <ul>
+            <li>evitar exposição prolongada ao sol;</li>
+            <li>manter as fotos longe da umidade;</li>
+            <li>armazená-las em álbuns, porta-retratos ou journals;</li>
+            <li>evitar contato com produtos químicos e superfícies abrasivas.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>Qualidade que você pode sentir</summary>
+        <div class="accordion-body">
+          <p>Selecionamos cuidadosamente os materiais utilizados para que cada foto tenha:</p>
+          <ul class="check-list">
+            <li>Cores vivas e fiéis ao arquivo original.</li>
+            <li>Excelente definição.</li>
+            <li>Acabamento fotográfico premium.</li>
+            <li>Papel de alta gramatura.</li>
+            <li>Resistência ao manuseio.</li>
+          </ul>
+          <p>Nosso objetivo é entregar fotografias feitas para serem guardadas, compartilhadas e revisitadas sempre que uma lembrança especial merecer sair da tela.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">perguntas <em>frequentes</em></h2>
+    </div>
+
+    <div class="accordion">
+      <details>
+        <summary>As fotos são reveladas?</summary>
+        <div class="accordion-body">
+          <p>Não. Nossas fotografias são produzidas por impressão fotográfica de alta qualidade em papel fotográfico premium, utilizando equipamentos profissionais e tintas originais. Esse processo oferece excelente definição, cores vibrantes e ótima durabilidade quando conservadas corretamente.</p>
+        </div>
+      </details>
+      <details>
+        <summary>As fotos desbotam?</summary>
+        <div class="accordion-body">
+          <p>Como qualquer fotografia — inclusive as reveladas em laboratório — elas podem sofrer alterações se ficarem expostas continuamente ao sol, calor intenso ou umidade. Em condições normais de armazenamento e uso, mantêm sua qualidade por muitos anos.</p>
+        </div>
+      </details>
+      <details>
+        <summary>As polaroids são Instax originais?</summary>
+        <div class="accordion-body">
+          <p>Não. Elas são impressões inspiradas no formato clássico das câmeras Instax, produzidas em papel fotográfico premium com acabamento de alta qualidade.</p>
+        </div>
+      </details>
+    </div>
   </section>
 
 </div>
