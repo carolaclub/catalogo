@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carola Club — Catálogo</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap');
-
 :root{
   --sky-top:#bfe1f6;
   --sky-mid:#dcf0fb;
@@ -24,7 +22,7 @@
 *{box-sizing:border-box;}
 html,body{margin:0;padding:0;}
 body{
-  font-family:'Poppins',sans-serif;
+  font-family:'Helvetica World','Helvetica Neue',Helvetica,Arial,sans-serif;
   color:var(--ink);
   background:
     radial-gradient(ellipse 60% 40% at 15% 8%, rgba(255,255,255,.9), transparent 60%),
@@ -58,7 +56,7 @@ header.hero{
   padding:6px 14px;border-radius:999px;
 }
 h1.brand{
-  font-family:'Playfair Display',serif;
+  font-family:'Times New Roman',Times,serif;
   font-weight:600;
   font-size:clamp(52px,9vw,84px);
   margin:0;
@@ -81,7 +79,7 @@ p.tagline{
 p.tagline .mark{background:linear-gradient(180deg,transparent 58%,var(--yellow) 58%);padding:0 3px;}
 .catalog-pill{
   display:inline-block;margin-top:26px;
-  font-family:'Playfair Display',serif;font-style:italic;font-size:15px;
+  font-family:'Times New Roman',Times,serif;font-style:italic;font-size:15px;
   color:var(--pink-deep);border-bottom:1.5px solid var(--pink-deep);padding-bottom:2px;
 }
 
@@ -91,7 +89,7 @@ p.tagline .mark{background:linear-gradient(180deg,transparent 58%,var(--yellow) 
   display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px;
 }
 h2.section-title{
-  font-family:'Playfair Display',serif;font-weight:600;
+  font-family:'Times New Roman',Times,serif;font-weight:600;
   font-size:clamp(30px,5vw,42px);margin:0;
 }
 h2.section-title em{
@@ -116,7 +114,7 @@ h2.section-title em{
   background:#f2efe6;
 }
 .polaroid figcaption{
-  text-align:center;font-family:'Playfair Display',serif;font-style:italic;
+  text-align:center;font-family:'Times New Roman',Times,serif;font-style:italic;
   font-size:14px;color:var(--ink-soft);margin-top:10px;
 }
 .polaroid-row{
@@ -180,7 +178,7 @@ table.price tbody tr:hover{background:#fffaf1;}
   font-weight:600;margin-bottom:8px;
 }
 .note h3{
-  font-family:'Playfair Display',serif;font-weight:600;font-size:26px;margin:0 0 6px;
+  font-family:'Times New Roman',Times,serif;font-weight:600;font-size:26px;margin:0 0 6px;
 }
 .note h3 em{font-style:italic;color:var(--pink-deep);}
 .note p{color:var(--ink-soft);font-size:14.5px;margin:0 0 18px;max-width:480px;}
@@ -193,24 +191,10 @@ table.price tbody tr:hover{background:#fffaf1;}
   display:flex;align-items:baseline;gap:10px;justify-content:flex-end;
   border-top:1px dashed var(--line);margin-top:20px;padding-top:16px;
 }
-.kit-price .num{font-family:'Playfair Display',serif;font-size:34px;font-weight:600;color:var(--pink-deep);}
+.kit-price .num{font-family:'Times New Roman',Times,serif;font-size:34px;font-weight:600;color:var(--pink-deep);}
 .kit-price .lbl{font-size:12px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em;}
 
-/* WHATSAPP */
-.wa-fab{
-  position:fixed;right:22px;bottom:22px;z-index:40;
-  width:58px;height:58px;border-radius:50%;
-  background:var(--pink-deep);
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 12px 26px -8px rgba(232,99,159,.65);
-  text-decoration:none;
-  animation:wa-pulse 2.6s ease-in-out infinite;
-}
-.wa-fab svg{width:27px;height:27px;fill:#fff;}
-@keyframes wa-pulse{
-  0%,100%{box-shadow:0 12px 26px -8px rgba(232,99,159,.65);}
-  50%{box-shadow:0 12px 30px -6px rgba(232,99,159,.9),0 0 0 8px rgba(232,99,159,.12);}
-}
+/* CTA (link do WhatsApp entra aqui no futuro) */
 .wa-cta{
   display:inline-flex;align-items:center;gap:8px;
   margin-top:16px;padding:11px 20px;
@@ -218,10 +202,16 @@ table.price tbody tr:hover{background:#fffaf1;}
   border-radius:999px;text-decoration:none;
   font-size:13.5px;font-weight:500;letter-spacing:.01em;
   box-shadow:0 10px 20px -12px rgba(232,99,159,.7);
-  transition:transform .15s ease, box-shadow .15s ease;
 }
-.wa-cta:hover{transform:translateY(-1px);box-shadow:0 14px 24px -12px rgba(232,99,159,.8);}
-.wa-cta svg{width:15px;height:15px;fill:#fff;}
+.cta-soon{
+  cursor:default;
+  opacity:.92;
+}
+.cta-soon:before{
+  content:"";
+  width:6px;height:6px;border-radius:50%;
+  background:#fff;opacity:.85;
+}
 
 /* FOOTER */
 footer{
@@ -229,7 +219,7 @@ footer{
   color:var(--ink-soft);font-size:13px;
 }
 footer .sign{
-  font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:var(--ink);
+  font-family:'Times New Roman',Times,serif;font-style:italic;font-size:20px;color:var(--ink);
   display:block;margin-bottom:10px;
 }
 hr.torn{border:none;height:14px;margin:0 auto 30px;max-width:200px;
@@ -271,10 +261,9 @@ hr.torn{border:none;height:14px;margin:0 auto 30px;max-width:200px;
         </tbody>
       </table>
     </div>
-    <a href="#" class="wa-cta wa-link" data-msg="Olá! Quero pedir Foto 10x15 do catálogo Carola Club.">
-      <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91.01-5.46-4.44-9.91-9.92-9.91Zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.22-8.25 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.24-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.42.06-.64.31-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.59 4.11 3.63.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
-      pedir pelo whatsapp
-    </a>
+    <span class="wa-cta cta-soon" data-msg="Olá! Quero pedir Foto 10x15 do catálogo Carola Club.">
+      vendas a partir de setembro
+    </span>
   </section>
 
   <!-- POLAROIDES -->
@@ -320,10 +309,9 @@ hr.torn{border:none;height:14px;margin:0 auto 30px;max-width:200px;
         </tbody>
       </table>
     </div>
-    <a href="#" class="wa-cta wa-link" data-msg="Olá! Quero pedir Polaroid Mini do catálogo Carola Club.">
-      <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91.01-5.46-4.44-9.91-9.92-9.91Zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.22-8.25 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.24-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.42.06-.64.31-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.59 4.11 3.63.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
-      pedir pelo whatsapp
-    </a>
+    <span class="wa-cta cta-soon" data-msg="Olá! Quero pedir Polaroid Mini do catálogo Carola Club.">
+      vendas a partir de setembro
+    </span>
 
     <div class="price-card" style="margin-top:34px;margin-bottom:22px;">
       <table class="price">
@@ -336,10 +324,9 @@ hr.torn{border:none;height:14px;margin:0 auto 30px;max-width:200px;
         </tbody>
       </table>
     </div>
-    <a href="#" class="wa-cta wa-link" data-msg="Olá! Quero pedir Polaroid Square do catálogo Carola Club.">
-      <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91.01-5.46-4.44-9.91-9.92-9.91Zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.22-8.25 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.24-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.42.06-.64.31-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.59 4.11 3.63.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
-      pedir pelo whatsapp
-    </a>
+    <span class="wa-cta cta-soon" data-msg="Olá! Quero pedir Polaroid Square do catálogo Carola Club.">
+      vendas a partir de setembro
+    </span>
 
     <div class="price-card" style="margin-top:34px;">
       <table class="price">
@@ -352,10 +339,9 @@ hr.torn{border:none;height:14px;margin:0 auto 30px;max-width:200px;
         </tbody>
       </table>
     </div>
-    <a href="#" class="wa-cta wa-link" data-msg="Olá! Quero pedir Polaroid Wide do catálogo Carola Club.">
-      <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91.01-5.46-4.44-9.91-9.92-9.91Zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.22-8.25 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.24-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.42.06-.64.31-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.59 4.11 3.63.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
-      pedir pelo whatsapp
-    </a>
+    <span class="wa-cta cta-soon" data-msg="Olá! Quero pedir Polaroid Wide do catálogo Carola Club.">
+      vendas a partir de setembro
+    </span>
   </section>
 
   <!-- KIT PHOTO JOURNAL -->
@@ -381,11 +367,10 @@ hr.torn{border:none;height:14px;margin:0 auto 30px;max-width:200px;
           </ul>
         </div>
         <div style="display:flex;flex-direction:column;justify-content:flex-end;">
-          <div class="kit-price"><span class="lbl">kit completo</span><span class="num">$10.750</span></div>
-          <a href="#" class="wa-cta wa-link" style="align-self:flex-end;" data-msg="Olá! Quero pedir o Kit Photo Journal do mês, do catálogo Carola Club.">
-            <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91.01-5.46-4.44-9.91-9.92-9.91Zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.22-8.25 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.24-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.42.06-.64.31-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.59 4.11 3.63.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
-            pedir pelo whatsapp
-          </a>
+          <div class="kit-price"><span class="lbl">kit completo</span><span class="num">$10.990</span></div>
+          <span class="wa-cta cta-soon" style="align-self:flex-end;" data-msg="Olá! Quero pedir o Kit Photo Journal do mês, do catálogo Carola Club.">
+            vendas a partir de setembro
+          </span>
         </div>
       </div>
     </div>
@@ -408,10 +393,9 @@ hr.torn{border:none;height:14px;margin:0 auto 30px;max-width:200px;
         </tbody>
       </table>
     </div>
-    <a href="#" class="wa-cta wa-link" data-msg="Olá! Quero pedir produtos avulsos do Journal Club (Carola Club).">
-      <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91.01-5.46-4.44-9.91-9.92-9.91Zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.22-8.25 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.24-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.42.06-.64.31-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.59 4.11 3.63.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
-      pedir pelo whatsapp
-    </a>
+    <span class="wa-cta cta-soon" data-msg="Olá! Quero pedir produtos avulsos do Journal Club (Carola Club).">
+      vendas a partir de setembro
+    </span>
   </section>
 
 </div>
@@ -420,21 +404,15 @@ hr.torn{border:none;height:14px;margin:0 auto 30px;max-width:200px;
   <hr class="torn">
   <span class="sign">obrigada por preservar suas memórias com a gente.</span>
   Carola Club · preços em pesos argentinos (ARS) · válidos até nova atualização de catálogo
+  <br style="margin-top:6px;">
+  <span style="display:inline-block;margin-top:10px;font-size:11.5px;">Copyright © 2026 Carola Club. Conforme art. 7º da Lei de Direitos Autorais nº 9.610 de 19/02/1998, esta obra está protegida.</span>
 </footer>
 
-<a href="#" class="wa-fab wa-link" data-msg="Olá! Vi o catálogo da Carola Club e quero fazer um pedido." aria-label="Pedir pelo WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.2h.01c5.46 0 9.91-4.45 9.91-9.91.01-5.46-4.44-9.91-9.92-9.91Zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.22-8.25 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.71-.14-.24-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.42.06-.64.31-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.59 4.11 3.63.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
-</a>
 
-<script>
-  var WA_NUMBER = "5491151099581";
-  document.querySelectorAll('.wa-link').forEach(function(el){
-    var msg = el.getAttribute('data-msg') || '';
-    el.setAttribute('href', 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg));
-    el.setAttribute('target', '_blank');
-    el.setAttribute('rel', 'noopener');
-  });
-</script>
+<!-- Botão do WhatsApp: reativar quando tivermos o número comercial.
+     Basta trocar <span class="wa-cta cta-soon"> por <a href="#" class="wa-cta wa-link">,
+     trocar o texto de volta para "pedir pelo whatsapp", e usar novamente o script
+     que preenche automaticamente os links a partir de WA_NUMBER + data-msg. -->
 
 </body>
 </html>
